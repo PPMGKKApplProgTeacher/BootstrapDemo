@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You submitted the form</title>
+</head>
+<body>
+    <h1> You submitted the form </h1>
+    <p> Your name is <span id="name"> </span></p>  
+    <script>
+        let searchString = (new URL(document.location)).search; //?name=Jonathan%20Smith&age=18
+        let params = (new URL(document.location)).searchParams;
+        let name = params.get('name'); // is the string "Jonathan Smith".
+        
+        document.getElementById("name").innerText = name;
+
+
+    </script>
+</body>
+</html>

@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Attach listeners to all fields
     fields.forEach(field => {
       const eventType = field.tagName === 'SELECT' ? 'change' : 'input';
-      field.addEventListener(eventType, updateProgress);
+      field.addEventListener(eventType, updateProgress());
     });
 });
 
